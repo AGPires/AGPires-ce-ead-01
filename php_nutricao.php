@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8"/>
@@ -29,11 +29,11 @@ $IMC3              = (54/$potencia3);
 $IMC4              = (85/$potencia4);
 $IMC5              = (46/$potencia5);
 
-$IMCFormatacao1    = number_format($IMC1, 1, ',', '.');
-$IMCFormatacao2    = number_format($IMC2, 1, ',', '.');
-$IMCFormatacao3    = number_format($IMC3, 1, ',', '.');
-$IMCFormatacao4    = number_format($IMC4, 1, ',', '.');
-$IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
+$IMCFormatacao1    = number_format($IMC1, 2, ',', '.');
+$IMCFormatacao2    = number_format($IMC2, 2, ',', '.');
+$IMCFormatacao3    = number_format($IMC3, 2, ',', '.');
+$IMCFormatacao4    = number_format($IMC4, 2, ',', '.');
+$IMCFormatacao5    = number_format($IMC5, 2, ',', '.');
 
 
         $data1 = new DateTime('19800101');
