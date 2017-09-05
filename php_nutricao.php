@@ -5,6 +5,9 @@
         <title>
             EAD 01 - Nutrição
         </title>
+        <link rel="stylesheet" 
+        type='text/css'
+        href='./css/estilos.css'>
     </head>
     <?php
 $p= 2;
@@ -23,17 +26,20 @@ $IMC2              = (80/$potencia2);
 $IMC3              = (54/$potencia3);
 $IMC4              = (85/$potencia4);
 $IMC5              = (46/$potencia5);
-$IMCFormatacao1    = number_format($IMC1, 0, ',', '.');
-$IMCFormatacao2    = number_format($IMC2, 0, ',', '.');
-$IMCFormatacao3    = number_format($IMC3, 0, ',', '.');
-$IMCFormatacao4    = number_format($IMC4, 0, ',', '.');
-$IMCFormatacao5    = number_format($IMC5, 0, ',', '.');
+$IMCFormatacao1    = number_format($IMC1, 1, ',', '.');
+$IMCFormatacao2    = number_format($IMC2, 1, ',', '.');
+$IMCFormatacao3    = number_format($IMC3, 1, ',', '.');
+$IMCFormatacao4    = number_format($IMC4, 1, ',', '.');
+$IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
     ?>
     <body>
         <h1>
-            EAD 01 - Nutrição
+            Promove Nutrição
         </h1>
-        <table border = 1>
+        <h2 align = 'center' >
+            Meus Pacientes
+        </h2>
+        <table id="playlistTable", align = 'center'>
             <tr>
                 <th>
                     Nome 
