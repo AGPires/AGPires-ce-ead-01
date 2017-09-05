@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <title>
-            EAD 01 - Nutrição
+            PROMOVE Nutrição
         </title>
         <link rel="stylesheet" 
         type='text/css'
@@ -16,21 +16,37 @@ $altura2           = 1.72;
 $altura3           = 1.64;
 $altura4           = 1.73;
 $altura5           = 1.55;
+
 $potencia1         = pow($altura1, $p); 
 $potencia2         = pow($altura2, $p);
 $potencia3         = pow($altura3, $p);
 $potencia4         = pow($altura4, $p);
 $potencia5         = pow($altura5, $p);
+
 $IMC1              = (100/$potencia1);
 $IMC2              = (80/$potencia2);
 $IMC3              = (54/$potencia3);
 $IMC4              = (85/$potencia4);
 $IMC5              = (46/$potencia5);
+
 $IMCFormatacao1    = number_format($IMC1, 1, ',', '.');
 $IMCFormatacao2    = number_format($IMC2, 1, ',', '.');
 $IMCFormatacao3    = number_format($IMC3, 1, ',', '.');
 $IMCFormatacao4    = number_format($IMC4, 1, ',', '.');
 $IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
+
+
+        $data1 = new DateTime('19800101');
+        $data2 = new DateTime('19900228');
+        $data3 = new DateTime('19850910');
+        $data4 = new DateTime('19890904');
+        $data5 = new DateTime('19781231');
+
+        $idadeData1 = $data1->diff(new DateTime());
+        $idadeData2 = $data2->diff(new DateTime());
+        $idadeData3 = $data3->diff(new DateTime());
+        $idadeData4 = $data4->diff(new DateTime());
+        $idadeData5 = $data5->diff(new DateTime());
     ?>
     <body>
         <h1>
@@ -39,7 +55,7 @@ $IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
         <h2 align = 'center' >
             Meus Pacientes
         </h2>
-        <table id="playlistTable", align = 'center'>
+        <table id= mytable>
             <tr>
                 <th>
                     Nome 
@@ -76,6 +92,9 @@ $IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
                 <td>
                     01/01/1980
                 </td>
+                <td>
+                    <?php echo $idadeData1->y . " anos."; ?>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -92,6 +111,9 @@ $IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
                 </td>
                 <td>
                     28/02/1990
+                </td>
+                <td>
+                    <?php echo $idadeData2->y . " anos."; ?>
                 </td>
             </tr>
             <tr>
@@ -110,6 +132,9 @@ $IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
                 <td>
                     10/09/1985
                 </td>
+                <td>
+                    <?php echo $idadeData3->y . " anos."; ?>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -127,6 +152,9 @@ $IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
                 <td>
                     04/09/1989
                 </td>
+                <td>
+                    <?php echo $idadeData4->y . " anos."; ?>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -143,6 +171,9 @@ $IMCFormatacao5    = number_format($IMC5, 1, ',', '.');
                 </td>
                 <td>
                     31/12/1978
+                </td>
+                <td>
+                    <?php echo $idadeData5->y . " anos."; ?>
                 </td>
             </tr>
         </table>
